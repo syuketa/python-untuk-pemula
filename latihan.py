@@ -1,13 +1,45 @@
-if True:
-    print("Kode ini berada di dalam blok if")
-    print("Masih di dalam blok if")
-print("Kode ini sudah di luar blok if")
+print("Halo Python")
 
-nama = input("Masukkan nama Anda: ")
-print("Halo,", nama)
+# Tipe data integers
+x = 5
+y = 3
+z = 5 + 3
 
-def main():
-    print("Hello dari fungsi main!")
+print(z)
 
-if __name__ == "__main__":
-    main()
+# Tipe data floating numbers
+a = 7.5
+
+print(a)
+
+
+# Tipe data integers
+x = 5
+y = 3
+z = 5 + 3
+
+print(z)
+
+# Tipe data floating numbers
+a = 7.5
+
+print(a)
+
+
+# Menggunakan single quote
+myFirstName = 'Rizqi'
+
+# Menggunakan double quote
+myLastName = "Maulana"
+
+# Penulisan Angka sebagai string
+myAge = "25"
+
+# Penulisan string multiline
+myHobby = """Hobi saya adalah
+bersepeda dan bermain game.
+"""
+
+# Mencetak 2 variabel string dengan perintah print
+print(myFirstName + " " + myLastName)
+print("Umur saya " + myAge)
