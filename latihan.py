@@ -46,9 +46,9 @@ b = False
 
 # Contoh penulisan boolean yang salah
 # Jika dijalankan, pada baris ini akan error
-c = true
+# c = true
 
-print(c)
+# print(c)
 
 
 
@@ -74,3 +74,46 @@ print(e) # 8
 print(f) # 2
 print(g) # 0
 print(h) # 16
+
+
+a = 3
+b = 5
+# Perbandingan sama dengan
+c = a == b
+# Perbandingan tidak sama dengan
+d = a != b
+# Perbandingan lebih kecil
+e = a < b
+# Perbandingan lebih kecil sama dengan
+f = a <= b
+# Perbandingan lebih besar
+g = a > b
+# Perbandingan lebih besar sama dengan
+h = a >= b
+
+# Cetak output
+print(c) # False
+print(d) # True
+print(e) # True
+print(f) # True
+print(g) # False
+print(h) # False
+
+
+a = 3
+b = 9
+
+# Contoh Penggunaan "and"
+print(a < 5 and b > 6) # True
+print(a < 5 and b < 6) # False
+print(a > 5 and b < 6) # False
+
+# Contoh Penggunaan "or"
+print(a < 5 or b > 6) # True
+print(a < 5 or b < 6) # True
+print(a > 5 or b < 6) # False
+
+# Contoh Penggunaan "not"
+print(not(a < 5 or b > 6)) # False
+print(not(a > 5 or b < 6)) # True
+
