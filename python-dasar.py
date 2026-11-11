@@ -87,3 +87,29 @@ print(kota, Kota)
 p, q = 10, 20
 p, q = q, p
 print("p =", p, "q =", q)
+
+
+
+
+
+# Bab 5: Konstanta
+# Python tidak punya konstanta sungguhan.
+# Konvensinya: nama ditulis HURUF BESAR dan nilainya tidak diubah.
+PI = 3.14159
+GRAVITASI = 9.8
+NAMA_APLIKASI = "Belajar Python"
+MAKS_PERCOBAAN = 3
+
+print(PI)
+print(GRAVITASI)
+print(NAMA_APLIKASI)
+print(MAKS_PERCOBAAN)
+
+# Contoh pemakaian konstanta dalam perhitungan
+jari_jari = 7
+luas_lingkaran = PI * jari_jari ** 2
+print("Luas lingkaran:", luas_lingkaran)
+
+massa = 5
+berat = massa * GRAVITASI
+print("Berat benda:", berat)
