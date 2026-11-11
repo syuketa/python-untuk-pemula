@@ -53,3 +53,37 @@ print(angka + 5)
 print(str(umur) + " tahun")
 print(float(umur))
 print(bool(0), bool(1))
+
+
+
+
+
+# Bab 4: Variable
+# Membuat variable dan mengisi nilainya
+nama_depan = "Budi"
+usia = 17
+print(nama_depan, usia)
+
+# Mengubah nilai variable
+usia = 18
+print("Usia sekarang:", usia)
+
+# Mengisi beberapa variable sekaligus
+x, y, z = 1, 2, 3
+a = b = c = 0
+print(x, y, z, a, b, c)
+
+# Aturan penamaan: huruf, angka, underscore; tidak boleh diawali angka
+nama_lengkap = "Budi Santoso"
+_rahasia = "boleh diawali underscore"
+print(nama_lengkap, _rahasia)
+
+# Python peka huruf besar-kecil (case sensitive)
+kota = "Subang"
+Kota = "Bandung"
+print(kota, Kota)
+
+# Menukar nilai dua variable
+p, q = 10, 20
+p, q = q, p
+print("p =", p, "q =", q)
