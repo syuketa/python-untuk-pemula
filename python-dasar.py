@@ -392,3 +392,44 @@ print("Suhu:", suhu.celsius)
 suhu.celsius = 35
 print("Suhu baru:", suhu.celsius)
 suhu.celsius = -500
+
+
+
+
+# Bab 13: Inheritance
+# Inheritance: class turunan mewarisi atribut dan method dari class induk
+class Hewan:
+    def __init__(self, nama):
+        self.nama = nama
+
+    def makan(self):
+        print(self.nama, "sedang makan")
+
+    def suara(self):
+        print("Hewan ini mengeluarkan suara")
+
+# Class turunan: Kucing mewarisi Hewan
+class Kucing(Hewan):
+    def suara(self):
+        print(self.nama, "berkata: Meong")
+
+# Class turunan dengan constructor sendiri, memakai super()
+class Anjing(Hewan):
+    def __init__(self, nama, ras):
+        super().__init__(nama)
+        self.ras = ras
+
+    def suara(self):
+        print(f"{self.nama} ({self.ras}) berkata: Guk guk")
+
+kucing = Kucing("Mimi")
+anjing = Anjing("Doggo", "Golden Retriever")
+
+kucing.makan()      # method warisan dari Hewan
+kucing.suara()
+anjing.makan()
+anjing.suara()
+
+# Mengecek hubungan class
+print(isinstance(kucing, Hewan))
+print(issubclass(Anjing, Hewan))
