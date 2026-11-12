@@ -312,3 +312,15 @@ python -m pip freeze > requirements.txt    # simpan daftar library
 python -m pip install -r requirements.txt # pasang ulang dari daftar
 deactivate                                 # keluar dari venv
 ```
+
+## Konfigurasi Environment dan IDE
+
+Editor yang dipakai: Visual Studio Code dengan ekstensi Python.
+
+1. Buka folder project di VS Code.
+2. Tekan `Ctrl+Shift+P`, pilih `Python: Select Interpreter`, lalu pilih `venv\Scripts\python.exe`.
+3. Pastikan status bar menampilkan versi Python dengan label `venv`.
+4. Pengaturan project tersimpan di `.vscode/settings.json`.
+5. Jalankan file dengan tombol Run, atau `python latihan.py` di terminal.
+
+Catatan: jika `pip.exe` diblokir antivirus Windows, pasang library dengan `python -m pip install nama-library`.
