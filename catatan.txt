@@ -1,0 +1,3 @@
+Belajar Python Dasar
+Baris kedua
+Baris ketiga ditambahkan

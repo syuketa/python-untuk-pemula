@@ -573,3 +573,43 @@ try:
     raise SaldoKurangError("Saldo kamu tidak cukup")
 except SaldoKurangError as e:
     print("Error:", e)
+    
+    
+    
+    
+    
+    # Bab 17: File Handling (Read & Write File)
+# Menulis file (mode "w" membuat file baru / menimpa isi lama)
+with open("catatan.txt", "w") as file:
+    file.write("Belajar Python Dasar\n")
+    file.write("Baris kedua\n")
+
+# Menambah isi file (mode "a" = append)
+with open("catatan.txt", "a") as file:
+    file.write("Baris ketiga ditambahkan\n")
+
+# Membaca seluruh isi file (mode "r")
+with open("catatan.txt", "r") as file:
+    isi = file.read()
+    print(isi)
+
+# Membaca baris per baris
+with open("catatan.txt", "r") as file:
+    for nomor, baris in enumerate(file, start=1):
+        print(nomor, baris.strip())
+
+# Membaca semua baris menjadi list
+with open("catatan.txt", "r") as file:
+    daftar_baris = file.readlines()
+    print(daftar_baris)
+
+# Mengecek apakah file ada
+import os
+print("File ada:", os.path.exists("catatan.txt"))
+
+# Menangani file yang tidak ditemukan
+try:
+    with open("tidak_ada.txt", "r") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("Error: file tidak ditemukan")
