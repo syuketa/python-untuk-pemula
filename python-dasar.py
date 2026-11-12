@@ -518,3 +518,58 @@ try:
     bentuk = BangunDatar()
 except TypeError as e:
     print("Error:", e)
+    
+    
+    
+    
+    
+    
+    # Bab 16: Exception Handling
+# try-except menangani error agar program tidak berhenti mendadak
+try:
+    hasil = 10 / 0
+except ZeroDivisionError:
+    print("Error: tidak bisa dibagi dengan nol")
+
+# Menangani beberapa jenis error
+try:
+    angka = int("abc")
+except ValueError:
+    print("Error: teks tidak bisa diubah menjadi angka")
+
+# try, except, else, finally
+try:
+    angka = int("42")
+except ValueError:
+    print("Input bukan angka")
+else:
+    print("Berhasil, angkanya:", angka)
+finally:
+    print("Blok finally selalu dijalankan")
+
+# Menangkap pesan error
+try:
+    data = [1, 2, 3]
+    print(data[10])
+except IndexError as e:
+    print("Terjadi error:", e)
+
+# Memunculkan error sendiri dengan raise
+def cek_umur(umur):
+    if umur < 0:
+        raise ValueError("Umur tidak boleh negatif")
+    return umur
+
+try:
+    cek_umur(-5)
+except ValueError as e:
+    print("Error:", e)
+
+# Exception buatan sendiri
+class SaldoKurangError(Exception):
+    pass
+
+try:
+    raise SaldoKurangError("Saldo kamu tidak cukup")
+except SaldoKurangError as e:
+    print("Error:", e)
