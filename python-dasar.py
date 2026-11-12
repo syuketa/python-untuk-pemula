@@ -465,3 +465,56 @@ print(len({"a": 1, "b": 2}))
 print(5 + 3)
 print("Halo, " + "Python")
 print([1, 2] + [3, 4])
+
+
+
+
+
+# Bab 15: Abstraction
+# Abstraction: menyembunyikan detail, hanya menampilkan kerangkanya
+from abc import ABC, abstractmethod
+
+# Abstract class: tidak bisa dibuat object langsung
+class BangunDatar(ABC):
+    @abstractmethod
+    def luas(self):
+        pass
+
+    @abstractmethod
+    def keliling(self):
+        pass
+
+    # Method biasa tetap boleh ada
+    def info(self):
+        print("Luas:", self.luas(), "| Keliling:", self.keliling())
+
+class Persegi(BangunDatar):
+    def __init__(self, sisi):
+        self.sisi = sisi
+
+    def luas(self):
+        return self.sisi ** 2
+
+    def keliling(self):
+        return 4 * self.sisi
+
+class Lingkaran(BangunDatar):
+    def __init__(self, jari_jari):
+        self.jari_jari = jari_jari
+
+    def luas(self):
+        return 3.14 * self.jari_jari ** 2
+
+    def keliling(self):
+        return 2 * 3.14 * self.jari_jari
+
+persegi = Persegi(5)
+lingkaran = Lingkaran(7)
+persegi.info()
+lingkaran.info()
+
+# Abstract class tidak bisa langsung dibuat object
+try:
+    bentuk = BangunDatar()
+except TypeError as e:
+    print("Error:", e)
