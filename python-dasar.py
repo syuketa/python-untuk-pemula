@@ -613,3 +613,35 @@ try:
         print(file.read())
 except FileNotFoundError:
     print("Error: file tidak ditemukan")
+    
+    
+    
+    
+    
+    
+    # Bab 18: Module
+# Module adalah file Python yang berisi kode siap pakai
+
+# Memakai module bawaan Python
+import math
+print(math.sqrt(16))
+print(math.pi)
+
+# Mengambil sebagian isi module
+from random import randint
+print("Angka acak:", randint(1, 10))
+
+# Memberi nama alias
+import datetime as dt
+print("Tanggal hari ini:", dt.date.today())
+
+# Memakai module buatan sendiri (file kalkulator.py di folder yang sama)
+import kalkulator
+print(kalkulator.tambah(5, 3))
+print(kalkulator.kali(4, 6))
+
+from kalkulator import bagi
+print(bagi(10, 2))
+
+# Melihat isi module
+print(dir(math)[:5])
