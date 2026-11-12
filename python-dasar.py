@@ -645,3 +645,15 @@ print(bagi(10, 2))
 
 # Melihat isi module
 print(dir(math)[:5])
+
+
+
+
+# Bab 19: Package
+# Package adalah folder berisi kumpulan module dan file __init__.py
+import perhitungan
+from perhitungan import kalkulator as kalk
+
+print(perhitungan.tambah(5, 3))
+print(kalk.kali(4, 6))
+print(perhitungan.bagi(10, 2))
