@@ -28,8 +28,8 @@ if True:
     print("Indentasi itu penting")
 
 # Meminta input dari pengguna
-nama = input("Siapa namamu? ")
-print("Halo,", nama)
+# nama = input("Siapa namamu? ")
+# print("Halo,", nama)
 
 
 
@@ -293,3 +293,36 @@ for key, value in siswa.items():
 
 # Mengecek key
 print("nama" in siswa)
+
+
+
+
+
+# Bab 11: Class & Object (OOP Dasar)
+# Class adalah cetak biru, object adalah hasil cetakannya
+class Siswa:
+    # Atribut class (dimiliki semua object)
+    sekolah = "SMK Negeri"
+
+    # Constructor: dipanggil otomatis saat object dibuat
+    def __init__(self, nama, kelas):
+        self.nama = nama
+        self.kelas = kelas
+
+    # Method: function di dalam class
+    def perkenalan(self):
+        print(f"Halo, saya {self.nama} dari kelas {self.kelas}")
+
+# Membuat object dari class
+siswa1 = Siswa("Budi", "XI RPL")
+siswa2 = Siswa("Ani", "XI RPL")
+
+# Mengakses atribut dan memanggil method
+print(siswa1.nama, siswa1.kelas)
+siswa1.perkenalan()
+siswa2.perkenalan()
+print("Sekolah:", Siswa.sekolah)
+
+# Mengubah nilai atribut
+siswa1.kelas = "XII RPL"
+siswa1.perkenalan()
