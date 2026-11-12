@@ -433,3 +433,35 @@ anjing.suara()
 # Mengecek hubungan class
 print(isinstance(kucing, Hewan))
 print(issubclass(Anjing, Hewan))
+
+
+
+
+
+# Bab 14: Polymorphism
+# Polymorphism: method dengan nama sama, tetapi perilakunya berbeda
+class Burung(Hewan):
+    def suara(self):
+        print(self.nama, "berkata: Cuit cuit")
+
+# Satu perulangan, banyak perilaku berbeda
+daftar_hewan = [Kucing("Mimi"), Anjing("Doggo", "Pug"), Burung("Kiki")]
+for hewan in daftar_hewan:
+    hewan.suara()
+
+# Function yang menerima object apa pun yang punya method suara()
+def bunyikan(hewan):
+    hewan.suara()
+
+bunyikan(Kucing("Tom"))
+bunyikan(Burung("Beo"))
+
+# Polymorphism juga ada pada function bawaan Python
+print(len("Python"))
+print(len([1, 2, 3, 4]))
+print(len({"a": 1, "b": 2}))
+
+# Operator + berperilaku berbeda sesuai tipe datanya
+print(5 + 3)
+print("Halo, " + "Python")
+print([1, 2] + [3, 4])
