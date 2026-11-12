@@ -298,3 +298,17 @@ Jalankan program Python:
 ```bash
 python latihan.py
 ```
+
+## PIP dan Virtual Environments
+
+PIP adalah package manager untuk memasang library Python. Virtual environment (venv) memisahkan library tiap project.
+
+```bash
+python -m venv venv                        # buat virtual environment
+venv\Scripts\activate                      # aktifkan (Windows)
+python -m pip install colorama             # pasang library
+python -m pip list                         # lihat library terpasang
+python -m pip freeze > requirements.txt    # simpan daftar library
+python -m pip install -r requirements.txt # pasang ulang dari daftar
+deactivate                                 # keluar dari venv
+```
