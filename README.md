@@ -2,13 +2,6 @@
 
 Catatan dan latihan belajar Python mengikuti materi [Santrikoding](https://santrikoding.com).
 
-```
-Progres   [██████████░░░░]  10 / 14 pelajaran (71%)
-Python    3.14
-Status    sedang belajar
-```
-
----
 
 ## Tentang
 
@@ -283,3 +276,25 @@ docs: update README with course progress
 
 - Santrikoding: Python untuk Pemula, https://santrikoding.com
 - Dokumentasi resmi Python, https://docs.python.org/3/
+
+
+
+
+
+## Pengenalan dan Instalasi Python
+
+Python adalah bahasa pemrograman tingkat tinggi yang mudah dibaca dan dipakai untuk web, otomasi, data, dan banyak bidang lain.
+
+Cek versi Python yang terpasang:
+
+```bash
+python --version
+```
+
+Contoh hasil: `Python 3.14.7`
+
+Jalankan program Python:
+
+```bash
+python latihan.py
+```
