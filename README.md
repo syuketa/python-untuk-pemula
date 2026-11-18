@@ -1,326 +1,108 @@
-# Python untuk Pemula
-
-Catatan dan latihan belajar Python mengikuti materi [Santrikoding](https://santrikoding.com).
-
-
-## Tentang
-
-Repo ini berisi latihan dari buku **Python untuk Pemula** di Santrikoding. Semua kode latihan ada di satu file, `latihan.py`, dan hasil outputnya ditulis di bagian "Hasil Output" di bawah.
-
-## Progres Belajar
-
-Keterangan: ✓ selesai, ○ belum
-
-### Pengenalan dan Instalasi Python
-
-| Status | Materi |
-|:---:|---|
-| ✓ | Pengenalan Python |
-| ✓ | Instalasi Python |
-
-### Dasar Pemrograman Python
-
-| Status | Materi |
-|:---:|---|
-| ✓ | Dasar Pemrograman Python |
-| ✓ | Variabel dan Tipe Data pada Python |
-| ✓ | Operator pada Python |
-| ✓ | Kondisi If Else pada Python |
-| ✓ | Perulangan pada Python |
-| ✓ | Lists dan Dictionaries pada Python |
-| ✓ | Function |
-| ✓ | Class dan Object |
-
-### PIP dan Virtual Environments
-
-| Status | Materi |
-|:---:|---|
-| ○ | PIP dan Virtual Environments |
-
-> Materi sisanya ditambahkan seiring progres belajar.
-
----
-
-## Ringkasan Materi
-
-### 1. Dasar Pemrograman Python
-
-Program pertama: menampilkan teks ke layar dengan `print()`.
-
-```python
-print("Halo Python")
-```
-
-### 2. Variabel dan Tipe Data
-
-Tipe data yang dipelajari: angka (`int` dan `float`), teks (`str`), dan `bool`.
-
-```python
-x = 5            # integer
-a = 7.5          # floating point
-nama = "Python"  # string
-benar = True     # boolean (harus diawali huruf besar)
-```
-
-### 3. Operator
-
-| Jenis | Operator |
-|---|---|
-| Aritmatika | `+`  `-`  `*`  `/`  `%`  `**` |
-| Perbandingan | `==`  `!=`  `<`  `<=`  `>`  `>=` |
-| Logika | `and`  `or`  `not` |
-
-### 4. Kondisi If Else
-
-Blok kode di dalam `if` ditentukan oleh indentasi (spasi di awal baris).
-
-```python
-a = 60
-
-if a > 90:
-    print("Dapat nilai A.")
-elif a > 70:
-    print("Dapat nilai B.")
-else:
-    print("Dapat nilai C.")
-```
-
-### 5. Perulangan
-
-```python
-for x in range(5):
-    print("Halo Python.")
-
-counter = 0
-while counter < 5:
-    print(counter)
-    counter += 1
-```
-
-### 6. Lists dan Dictionaries
-
-Menyimpan banyak nilai dalam satu variabel: list berdasarkan urutan, dictionary berdasarkan `key`.
-
-### 7. Function
-
-Function dengan argumen, arbitrary arguments (`*names`), keyword arguments, `**kwargs`, dan nilai default.
-
-```python
-def belajar_python(name="Alien"):
-    print("Halo, Saya %s" % name)
-
-belajar_python()          # Halo, Saya Alien
-belajar_python("Rizqi")   # Halo, Saya Rizqi
-```
-
-### 8. Class dan Object
-
-Class sebagai cetak biru objek, lengkap dengan property, constructor, dan method.
-
-```python
-class Cat:
-    def __init__(self, color):
-        self.color = color
-
-    def say(self):
-        print("Meong..meong")
-
-cat1 = Cat("orange")
-print(cat1.color)   # orange
-cat1.say()          # Meong..meong
-```
-
----
-
-## Hasil Output
-
-### Boolean (kesalahan penulisan)
-
-```
-c = true
-NameError: name 'true' is not defined. Did you mean: 'True'?
-```
-
-### Operator aritmatika (a = 4, b = 2)
-
-```
-6      # a + b
-2      # a - b
-8      # a * b
-2.0    # a / b
-0      # a % b
-16     # a ** b
-```
-
-### Operator perbandingan (a = 3, b = 5)
-
-```
-False  # a == b
-True   # a != b
-True   # a <  b
-True   # a <= b
-False  # a >  b
-False  # a >= b
-```
-
-### Operator logika (a = 3, b = 9)
-
-```
-True   # a < 5 and b > 6
-False  # a < 5 and b < 6
-False  # a > 5 and b < 6
-True   # a < 5 or  b > 6
-True   # a < 5 or  b < 6
-False  # a > 5 or  b < 6
-False  # not(a < 5 or b > 6)
-True   # not(a > 5 or b < 6)
-```
-
-### Kondisi If Else
-
-```
-Benar.
-nilai x lebih kecil dari y.
-Dapat nilai B.
-Dapat nilai C.
-```
-
-### Perulangan
-
-```
-Halo Python.   (5 kali)
-Apple
-Banana
-Mango
-Durian
-i n d o n e s i a   (satu huruf per baris)
-0 1 2 3 4
-```
-
-### Function
-
-```
-Halo
-Halo, Saya Rizqi
-Halo, Saya Rizqi. Umur saya 30
-Halo, Saya Rizqi
-Halo, Saya Fika
-Halo, Saya Yudi
-Halo, Saya Rizqi. Umur Saya 30
-Halo, Saya Fika. Umur Saya 25
-Halo, Saya Rizqi. Umur Saya 20
-Halo, Saya Alien
-```
-
-### Class dan Object
-
-```
-black
-orange
-Meong..meong
-My color is black
-```
-
----
-
-## Kesalahan yang Pernah Ditemui
-
-| Kode salah | Masalah | Yang benar |
-|---|---|---|
-| `c = true` | `NameError`, boolean harus huruf besar | `c = True` |
-| `counter =+ 1` | Dibaca `counter = +1`, loop tidak pernah berhenti | `counter += 1` |
-| `for (x in range(5)):` | `SyntaxError`, kata `in` tidak boleh dibungkus kurung | `for x in range(5):` |
-
----
-
-## Cara Menjalankan
-
-```bash
-# 1. Clone repo
-git clone https://github.com/syuketa/python-untuk-pemula.git
-cd python-untuk-pemula
-
-# 2. Buat dan aktifkan virtual environment
-python -m venv venv
-venv\Scripts\activate        # Windows
-source venv/bin/activate     # Linux / macOS
-
-# 3. Pasang dependency
-pip install -r requirements.txt
-
-# 4. Jalankan
-python latihan.py
-```
-
-## Struktur Folder
+# Python for Beginners
+
+A learning repository for Python fundamentals. It holds two practice files, each covering its own set of topics, together with screenshots that show the output of every chapter.
+
+| File | Content |
+|------|---------|
+| `latihan.py` | Python basics practice: data types, operators, conditions, loops, lists, dictionaries, functions, and classes |
+| `python-dasar.py` | Python Basics, 19 chapters from installation to packages |
+
+## Part 1: Practice Topics (`latihan.py`)
+
+- **Variables and Data Types**: integers, floats, strings, and booleans.
+- **Operators**: arithmetic, comparison, and logical operators (`and`, `or`, `not`).
+- **Conditions**: `if`, `elif`, `else`, and indentation rules.
+- **Loops**: `for`, `while`, `break`, and `continue`.
+- **Lists and Dictionaries**: indexing, adding, updating, and removing items.
+- **Functions**: arguments, `*args`, `**kwargs`, and default values.
+- **Classes and Objects**: properties, constructors, and methods.
+
+## Part 2: Python Basics (`python-dasar.py`)
+
+1. Introduction & Python Installation
+2. Basic Program Structure
+3. Basic Data Types
+4. Variables
+5. Constants
+6. Operators
+7. Control Flow
+8. Functions
+9. List, Tuple, and Set
+10. Dictionary
+11. Class & Object
+12. Encapsulation
+13. Inheritance
+14. Polymorphism
+15. Abstraction
+16. Exception Handling
+17. File Handling
+18. Modules (uses `kalkulator.py`)
+19. Packages
+
+## Prerequisites
+
+- Python 3.12 or newer
+- Git
+- Visual Studio Code (optional, recommended)
+
+## Getting Started
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/syuketa/python-untuk-pemula.git
+   cd python-untuk-pemula
+   ```
+
+2. Create and activate a virtual environment (Windows PowerShell):
+
+   ```
+   python -m venv venv
+   .\venv\Scripts\Activate.ps1
+   ```
+
+   If PowerShell reports an *execution policy* error, run this once:
+
+   ```
+   Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+   ```
+
+3. Install the dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+4. Run a program:
+
+   ```
+   python latihan.py
+   python python-dasar.py
+   ```
+
+Both programs print their output from top to bottom, so the output of earlier chapters appears first.
+
+## Project Structure
 
 ```
 python-untuk-pemula/
-├── latihan.py          kode latihan semua materi
-├── requirements.txt    daftar dependency
-├── screenshots/        screenshot hasil output
+├── screenshots/        # execution screenshots for every chapter
+├── kalkulator.py       # module used in chapter 18 of Part 2
+├── latihan.py          # Part 1 source code
+├── python-dasar.py     # Part 2 source code
+├── requirements.txt    # dependency list
 ├── .gitignore
 └── README.md
 ```
 
-## Konvensi Commit
+Chapter 17 of Part 2 creates a file named `catatan.txt` when it runs. The file is generated automatically and should not be committed.
 
-Pesan commit memakai format [Conventional Commits](https://www.conventionalcommits.org) dalam bahasa Inggris:
+## Commit Convention
+
+Every chapter is committed separately and pushed right after it is finished. Commit messages follow [Conventional Commits](https://www.conventionalcommits.org/), for example:
 
 ```
-feat(basics): add for and while loop examples
-docs: update README with course progress
+feat(dasar): implement dictionary
+feat(dasar): add function examples
+docs: update README
 ```
-
-## Referensi
-
-- Santrikoding: Python untuk Pemula, https://santrikoding.com
-- Dokumentasi resmi Python, https://docs.python.org/3/
-
-
-
-
-
-## Pengenalan dan Instalasi Python
-
-Python adalah bahasa pemrograman tingkat tinggi yang mudah dibaca dan dipakai untuk web, otomasi, data, dan banyak bidang lain.
-
-Cek versi Python yang terpasang:
-
-```bash
-python --version
-```
-
-Contoh hasil: `Python 3.14.7`
-
-Jalankan program Python:
-
-```bash
-python latihan.py
-```
-
-## PIP dan Virtual Environments
-
-PIP adalah package manager untuk memasang library Python. Virtual environment (venv) memisahkan library tiap project.
-
-```bash
-python -m venv venv                        # buat virtual environment
-venv\Scripts\activate                      # aktifkan (Windows)
-python -m pip install colorama             # pasang library
-python -m pip list                         # lihat library terpasang
-python -m pip freeze > requirements.txt    # simpan daftar library
-python -m pip install -r requirements.txt # pasang ulang dari daftar
-deactivate                                 # keluar dari venv
-```
-
-## Konfigurasi Environment dan IDE
-
-Editor yang dipakai: Visual Studio Code dengan ekstensi Python.
-
-1. Buka folder project di VS Code.
-2. Tekan `Ctrl+Shift+P`, pilih `Python: Select Interpreter`, lalu pilih `venv\Scripts\python.exe`.
-3. Pastikan status bar menampilkan versi Python dengan label `venv`.
-4. Pengaturan project tersimpan di `.vscode/settings.json`.
-5. Jalankan file dengan tombol Run, atau `python latihan.py` di terminal.
-
-Catatan: jika `pip.exe` diblokir antivirus Windows, pasang library dengan `python -m pip install nama-library`.
